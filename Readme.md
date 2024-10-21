@@ -1,46 +1,57 @@
-Sample Car Booking Application
-The Sample Car Booking App is a web application built with Java (Spring Boot) and Angular that allows users to book cars for rent. It supports two types of users: Customers and Dealers.
+# Sample Car Booking Application
 
-User Roles
-Dealer
-Dealers can add cars for various outlets/locations.
-Dashboard features include:
-Adding, editing, deleting, and updating cars.
-Searching, sorting, and paginating through their car listings.
-Customer
-Customers can browse and book cars listed by any dealer.
-Dashboard features include:
-Viewing and filtering available cars with search, sort, and pagination options.
-A "Book Now" button for each car to facilitate bookings.
-Shared Features
-Both Customers and Dealers can view their bookings and manage their profiles from the sidebar menu after logging in.
-Technology Stack
-Backend: Spring Boot
-Frontend: Angular
-UI Components: Angular Material for enhanced user experience, including sidebar, cards, tables, and dialogs.
-Pre-requisites
-Ensure you have the following installed before running the application:
+"Sample Car Booking App" is a java and angular based web application that can be used to book a car on rent. 
 
-JDK (version 8.0)
-Maven (version 3.3)
-MySQL Server (version 8)
-Node.js (version 10.16.0 LTS)
-Angular CLI (version 8.0.0 LTS)
-Running the Application
-API Server
-Start the MySQL server.
-Update the MySQL root credentials in carbooking/api/src/main/resources/application.yml.
-Create a database named carbooking in MySQL.
-Build and run the application.
-Docker Instructions
-To run the application in a Docker container:
+Two types of users can register in this application "Customer" and "Dealer".
 
-Build the Docker image.
-Run the Docker container.
-UI Application
-Open a command prompt or terminal.
-Navigate to the project directory.
-Install dependencies.
-Start the Angular application.
-Accessing the Application
-The application will be accessible at: http://localhost:4200/
+Dealer: users will be adding the cars for the listed outlets/location. 
+has options on the dashboard to add, edit, delete, and update the cars and the list cars added by him/her including searching, sorting, and pagination functionality.
+
+Customer: users will be booking the cars added by any dealer. can see the list of cars on their dashboard with searching, sorting, and pagination functionality. Apart from these options, customer has an additional button "Book Now" with each listed car to book that car.
+
+Both (Customer and Dealer): users can see their bookings and profile from the sidebar menu after login.
+
+* Latest Angular version has been used for better performance.
+* Angular Router has been used to make this SPA (Single Page Application) for better performance.
+* Latest Angular Material components has been used in the application for better user experience. For example sidebar, card, table, and dialog, components etc .   
+
+=======================================================================
+  
+## Pre-requisites:
+
+Install following before running the app:
+
+* 1. jdk (8.0 used)
+* 2. maven (3.3 used)
+* 3. mysql server (8 used)
+* 4. NodeJs (10.16.0 LTS used)
+* 5. Angular CLI (8.0.0 LTS used)
+
+=======================================================================
+
+## Steps to run the API application server:
+
+* 1. start MySQL server
+* 2. change mysql root credential in "carbooking/api/src/main/resources/application.yml"
+* 3. create database "carbooking" in MySQL
+* 4. Run mvn clean install 
+* 5. java -jar <above_created_jar>
+
+
+## Note:  if u want to run this jar as docker then follow below instructions:
+
+* 1. Make sure you have executed mvn clean install 
+* 2. docker build .
+* 3. docker run <image_name>
+
+
+=======================================================================
+
+## Steps to run the UI application server:
+
+* 1. Open cmd
+* 2. Go to <project directory>
+* 3. npm install
+* 4. ng serve --open
+
+## Note: application will execute on URL :  http://localhost:4200/
